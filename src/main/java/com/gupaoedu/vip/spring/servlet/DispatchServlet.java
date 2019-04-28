@@ -193,7 +193,7 @@ public class DispatchServlet extends HttpServlet {
     private void doLoadConfig(String location) {
         //在Spring中是通过Reader去查找和定位对不对
         InputStream is = this.getClass().getClassLoader().getResourceAsStream(location.replace("classpath:", ""));
-
+        this.getClass().getClassLoader();
         try {
             contextConfig.load(is);
         } catch (IOException e) {
